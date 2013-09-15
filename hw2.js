@@ -99,9 +99,11 @@ console.log(jsTopics.length);
 	
 function clickMe()
 {
-	getElementById"clickMe".innerHTML="Leave me alone!";
+     document.getElementById"clickMe".innerHTML="Leave me alone!";
 }
-<button id = "clickMe" type="button" onClick="clickMe()">Click Me!</button>
+<p id = "clickMe">
+<button type="button" onClick="clickMe()">Click Me!</button>
+</p>
 
 
 	
