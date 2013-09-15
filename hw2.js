@@ -96,5 +96,12 @@ console.log(jsTopics.length);
 	// hint: Use document.getElementById to get a reference to the button in
 	// a similar way to how we did it in class for the currency conversion
 	// calculator.
+	
+function clickMe()
+{
+	getElementById"clickMe".innerHTML="Leave me alone!";
+}
+<button id = "clickMe" type="button" onClick="clickMe()">Click Me!</button>
+
 
 	
