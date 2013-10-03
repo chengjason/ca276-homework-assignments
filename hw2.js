@@ -33,8 +33,8 @@ var myMajor = 'Computer Applications';
 var myTextEditor = 'Dreamweaver CS6';
 var Zip = '20850';
 var pi = 3.14159;
-var x = 10, bookCost = x*(1+0.05);
-var lightSwitchOn = true, lightSwitchOff = false;
+var x = 10, bookCost = x * (1 + 0.05);
+var lightSwitchOn = true; //JG: You only need one variable to manage your "on" or "off" state. Later on it can be made false.
 var superManFly = true; 
 console.log(myEmailAdd, myMajor, myTextEditor, Zip, pi, bookCost, lightSwitchOn, superManFly);
 
@@ -97,11 +97,16 @@ console.log(jsTopics.length);
 	// a similar way to how we did it in class for the currency conversion
 	// calculator.
 	
-function clickMe()
-{
-	getElementById"clickMe".innerHTML="Leave me alone!";
-}
-<button id = "clickMe" type="button" onClick="clickMe()">Click Me!</button>
+// function clickMe() {
+	// getElementById"clickMe".innerHTML="Leave me alone!";
+// }
+// <button id = "clickMe" type="button" onClick="clickMe()">Click Me!</button>
 
+document.getElementById('clickMe').onclick = function () {
+	console.log('Leave me alone!');
+}
+
+// JG: Problem 8 doesn't work and it throws an error. The only time you want HTML in your .js file is if you are keeping it within a string variable.
 
 	
+// Grade: 8/10
