@@ -69,7 +69,7 @@ function Q(cookieThief){               //declare var cookieThief
 	//
 	// Examples of Boolean conditions can be found here on Ex. 2.1: http://eloquentjavascript.net/chapter2.html
 function H(wkday, time, room) {                //Declare variables
-	if(wkday == 'Thursday' && time == '6:30 PM' && room == 'HU 317'){
+	if(wkday ==='Thursday' && time === '6:30 PM' && room === 'HU 317'){
 		console.log("You are in CA276");
 	}
 	else{
