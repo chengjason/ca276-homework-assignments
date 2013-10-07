@@ -28,22 +28,23 @@
 	// The total cost of a 10 dollar book plus 5% sales tax
 	// Whether or not the light switch is on
 	// Whether or not Superman can fly
-var myEmailAdd ='cadillacboy09@gmail.com';
+var myEmail ='cadillacboy09@gmail.com';
 var myMajor = 'Computer Applications';
 var myTextEditor = 'Dreamweaver CS6';
-var Zip = '20850';
+var zip = '20850';
 var pi = 3.14159;
-var x = 10, bookCost = x * (1 + 0.05);
+var x = 10;
+var bookCost = x * (1 + 0.05);
 var lightSwitchOn = true; //JG: You only need one variable to manage your "on" or "off" state. Later on it can be made false.
 var superManFly = true; 
-console.log(myEmailAdd, myMajor, myTextEditor, Zip, pi, bookCost, lightSwitchOn, superManFly);
+console.log(myEmail, myMajor, myTextEditor, zip, pi, bookCost, lightSwitchOn, superManFly);
 
 // Problem 3) Use the typeof operator to determine the data type of each variable like so.
 	// console.log(typeof myEmail);
 	// console.log(typeof myMajor);
 	// and so on…
 	// Make sure you have at least one string, at least one number, and at least one Boolean.
-console.log(typeof myEmailAdd);
+console.log(typeof myEmail);
 console.log(typeof myMajor);
 console.log(typeof myTextEditor);
 console.log(typeof Zip);
@@ -107,6 +108,3 @@ document.getElementById('clickMe').onclick = function () {
 }
 
 // JG: Problem 8 doesn't work and it throws an error. The only time you want HTML in your .js file is if you are keeping it within a string variable.
-
-	
-// Grade: 8/10
