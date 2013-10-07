@@ -122,7 +122,7 @@ console.log(bartSimpson);
 	// Do the same as you did in question 4 but write it as a for loop.
 var bartSimpson = '';
 
-for (i = 0; i < 10; i+= 1){
+for (i = 0; i < 10; i += 1){
 	bartSimpson += 'I will not make fun of the teacher using JavaScript code.';
 }
 
