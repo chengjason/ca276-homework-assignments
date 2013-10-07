@@ -23,8 +23,8 @@
 	// 5 divided by 5
 console.log(5 + 5);   // = 10
 console.log(5 - 5);   // = 0
-console.log(5*5);     // = 25
-console.log(5/5);     // = 1
+console.log(5 * 5);     // = 25
+console.log(5 / 5);     // = 1
 
 
 // Problem 2
@@ -44,16 +44,22 @@ console.log(5/5);     // = 1
 	// You can accomplish this with a series of if, if else, if else if, or a function that has return statements. Choose whichever you think works best.
 	//
 	// You can review Rebecca Murphey's post on how to avoid using "else if" by going here: http://rmurphey.com/blog/2012/12/10/js-conditionals/
-function Q(cookieThief){               //declare var cookieThief
-	if(cookieThief == 'Dad'){
-		console.log("He is going to be in big trouble!");}
-		else if(cookieThief == 'Mom') {
-			console.log("No big deal.");}
-			else if(cookieThief == 'Me') {
-				console.log("No more cookies for you.");}
-				else{
-					console.log("Johnny did it.");}
+
+function cookieThiefFinder(cookieThief){
+	if (cookieThief == 'Dad'){
+		return "He is going to be in big trouble!";
+	} else if (cookieThief == 'Mom') {
+		return "No big deal.";
+	} else if (cookieThief == 'Me') {
+		return "No more cookies for you.";
+	} else {
+		return "Johnny did it.";
+	}
 }
+
+cookieThiefFinder('Mom');
+
+// JG: I fixed the indentation, gave the function a more descriptive name, and changed console.log statements to return statements.
 
 // Problem 3
 	// Boolean conditions
@@ -68,14 +74,18 @@ function Q(cookieThief){               //declare var cookieThief
 	// "You are in another class"
 	//
 	// Examples of Boolean conditions can be found here on Ex. 2.1: http://eloquentjavascript.net/chapter2.html
-function H(wkday, time, room) {                //Declare variables
-	if(wkday == 'Thursday' && time == '6:30 PM' && room == 'HU 317'){
-		console.log("You are in CA276");
-	}
-	else{
-		console.log("You are in another class");
+
+function isCA276(wkday, time, room) {                //Declare variables
+	if (wkday == 'Thursday' && time == '6:30 PM' && room == 'HU 317'){
+		return "You are in CA276";
+	} else{
+		return "You are in another class";
 	}
 }
+
+console.log(isCA276('Thursday', '6:30 PM', 'HU 317'));
+
+// JG: Try not to use cryptic function names like Q and H
 
 // Problem 4
 	// Bart Simpson detention problem
@@ -98,18 +108,24 @@ function H(wkday, time, room) {                //Declare variables
 	//
 	// console.log(bartSimpson);
 var bartSimpson = ''; 
-var i=0; 
-while (i<10) {
-	console.log('I will not make fun of the teacher using JavaScript code.'); 
-	++i;
+var i = 0; 
+
+while (i < 10) {
+	bartSimpson += 'I will not make fun of the teacher using JavaScript code.'; 
+	i += 1;
 }
+
 console.log(bartSimpson);
 
 
 // Problem 5
 	// Do the same as you did in question 4 but write it as a for loop.
 var bartSimpson = '';
-for (var i=0; i<10; ++i){
-	console.log('I will not make fun of the teacher using JavaScript code.');
+
+for (i = 0; i < 10; i+= 1){
+	bartSimpson += 'I will not make fun of the teacher using JavaScript code.';
 }
+
 console.log(bartSimpson);
+
+// JG: String concatentation wasn't happening on both loops so I fixed that.
