@@ -11,42 +11,45 @@
 var courseName = "CA 276";
 var marchDays = "31";
 var knowJs = true;
-var bestRestaurant = "Ledo Pizza";
-var annualSalary = "89,000";
+//JG: Since this can be plural an array would work better. Nice choice by the way.
+var bestRestaurant = ["Ledo Pizza"];
+//JG: Perhaps a number type would be more appropriate
+var annualSalary = 89000;
 
-console.log(20 + 0.25);
-console.log(400 * 0.15);
+console.log(20 * 1.25);
+console.log(400 * 0.85);
 console.log(5 * 4);
 console.log(75 / 5);
 console.log(0.1 * 0.2);
-Math.round(0.02);
+console.log((0.1 * 0.2).toFixed(2));
 
 var editor = "Notepad";
-function editorFinder(editor){
-if (editor == "Eclipse"){
-      return "Java developer";
-}
-else if (editor == "Aptana Studio"){
-      return "Web developer";
-}
-else if (editor == "Sublime Text"){
-      return "I am awesome";
-}
-else {
-       return "Wrong editor";
-   }
+
+function editorFinder(editor) {
+	if (editor === "Eclipse") {
+		return "Java developer";
+	} else if (editor === "Aptana Studio") {
+		return "Web developer";
+	} else if (editor === "Sublime Text") {
+		return "I am awesome";
+	} else if (editor === "Notepad") {
+		return "Wrong editor";
+	}
 }
 
-var mooreCadillac = '';
-for(var i = 5; i < 15; i++){
-	mooreCadillac += "I will go to Moore Cadillac in Virginia.";
+var mooreCadillac = '', i;
+
+for(i = 5; i <= 15; i++){
+	// mooreCadillac += "I will go to Moore Cadillac in Virginia.";
+	console.log(i);
 }
+
 console.log(mooreCadillac);
 
-function add(num1, num2, num3){
-     return num1 + num2 + num3 /3;
+function average(num1, num2, num3){
+	return (num1 + num2 + num3) /3;
 }
-	
+
 //The hardest part about learning JavaScript is arguments, functions, conditions, and arrays.
 
 </script>
