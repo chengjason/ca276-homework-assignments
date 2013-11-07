@@ -151,9 +151,11 @@ console.log(p2.introduce());
 // 
 // s1.swim();
 function GolfPlayer(name, age, country, gender, professional, record) {
-	this.name = name;
-	this.age = age;
-	this.country = country;
+	//JG: I didn't cover this in class, so I'm covering it here.
+	//JG: The __proto__ property is how you assign values up the prototype chain.
+	this.__proto__.name = name;
+	this.__proto__.age = age;
+	this.__proto__.country = country;
 	this.gender = gender;
 	this.professional = professional;
 	this.bestRecord = record;
