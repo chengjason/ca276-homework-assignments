@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Registration Form for CA276</title>
+
+<style type="text/css">
+body { font-family: Helvetica, sans-serif; font-weight:bold; font-size: 14px; }
+			
+br { clear: both; }
+			
+form div, input, label, select, textarea { display: block; float: left; font-weight: normal; }
+			
+form div label, form div input { float: none; display: inline; }
+			
+form div, label + input, label + textarea, label + select, label + textarea { margin-bottom: 15px; }
+			
+form div br { clear: none; }
+						
+input, textarea { font: 12px Helvetica, Arial; color: DarkBlue; }
+			
+input[type="text"] { width: 250px; }
+			
+input[type="email"] { width: 250px; }
+
+input[type="url"] { width: 250px; }
+
+input[type="password"] { width: 175px; }
+
+input[name="age"] {width: 60px;}
+
+input[name="zip"] {width: 60px;}
+
+input[name="phone"] {width: 175px;}
+
+input[name="mobile"] {width: 175px;}
+			
+input[type="radio"], input[type="checkbox"] { padding-right: 5px; }
+			
+label { width: 100px; }
+			
+a:visited { color: Blue; }
+			
+textarea { display: inline; height: 75px; width: 250px; }
+			
+#form_wrapper { border: 1px solid Gray; border-radius: 8px; margin: 0 auto; padding: 10px 15px; width: 500px; }
+			
+.hidden { display: none; }
+			
+.dialog { border-radius: 8px; font-size: 18px; font-weight: bold; padding: 8px 0; margin: 0 auto 16px auto; text-align: center; width: 80%; }
+			
+.warning { background-color: LightPink; color: DarkRed; }
+			
+.status { background-color: LightGreen; color: Teal; }
+			
+#error { background-color: LightPink; border-radius: 4px; color: DarkRed; padding: 8px; }
+</style>
+
+<script type="text/javascript" src="final_MSGinline.js"></script>
+
+</head>
+
+<body>
+
+<div id="form_wrapper">
+<form method="post" action="mailto:jasonxtype@comcast.net" enctype="text/plain"  onsubmit="return validateForm()">
+<fieldset id="registration">
+<legend style="color:#063; font-family:Verdana, Geneva, sans-serif;  font-size:18px; font-weight:bold;">Registration for CA 276</legend>
+<fieldset>
+<label for="first_name">First Name</label>
+<input type="text" id="first_name" name="first_name"  class="required" 
+maxlength="50" placeholder="'John'" onblur="validateName(first_name)" autofocus="autofocus"><br>
+<span id="first_nameError" style="display: none; color:#090;">You can only use alphabetic characters, hyphens and apostrophes</span>
+</fieldset>
+<fieldset>
+<label for="last_name">Last Name</label>
+<input type="text" id="last_name" name="last_name"  class="required" onblur="validateName(last_name)" 
+maxlength="50" placeholder="'Smith'"><br>
+<span id="last_nameError" style="display: none; color:#090;">**You can only use alphabetic characters, hyphens and apostrophes**</span>
+</fieldset>
+<fieldset>
+<label for="street">Street Number</label>
+<input type="text" id="street" name="street" class="required" onblur="validateName(street)" maxlength="50" placeholder="12345 Hungersford Road" /><br />
+<span id="streetError" style="display: none; color:#090;">**Please enter street and number **</span>
+</fieldset>
+<fieldset>
+<label for="city">City</label>
+<input type="text" id="city" name="city" class="required" onblur="validateName(city)"
+maxlength="18" placeholder="Rockville" /><br />
+<span id="cityError" style="display: none; color:#090;">**Please enter city name **</span>
+</fieldset>
+<fieldset>
+<label for="state">State</label>
+<select id="state" name="state" onblur="validateSelect(state)"> 
+ 
+<option value="">(Please select a state)</option>  
+<option value="AK">Alaska</option>  
+<option value="AL">Alabama</option> 
+<option value="AZ">Arizona</option> 
+<option value="AR">Arkansas</option>   
+<option value="CA">California</option> 
+<option value="CT">Conneticut</option>  
+<option value="CO">Colorado</option>   
+<option value="DE">Delaware</option>   
+<option value="FL">Florida</option>
+<option value="GA">Georgia</option>
+<option value="HI">Hawaii</option>  
+<option value="ID">Idaho</option>      
+<option value="IL">Illinois</option> 
+<option value="IN">Indiana</option>   
+<option value="IA">Iowa</option>  
+<option value="KS">Kansas</option>  
+<option value="KY">Kentucky</option> 
+<option value="LA">Louisiana</option> 
+<option value="ME">Maine</option> 
+<option value="MD">Maryland</option>    
+<option value="MD">Massachusetts</option>
+<option value="MI">Michigan</option>
+<option value="MN">Minnesota</option>    
+<option value="MS">Mississippi</option>
+<option value="MO">Missouri</option> 
+<option value="MT">Montana</option>  
+<option value="NB">Nebraska</option>
+<option value="NV">Nevada</option>  
+<option value="NH">New Hampshire</option>
+<option value="NJ">New Jersey</option>  
+<option value="NM">New Mexico</option>  
+<option value="NY">New York</option>           
+<option value="NC">North Carolina</option> 
+<option value="ND">North Dakota</option>
+<option value="OH">Ohio</option>
+<option value="OK">Oklahoma</option>   
+<option value="OR">Oregon</option>      
+<option value="PA">Pennsylvania</option>
+<option value="RI">Rhode Island</option>  
+<option value="SC">South Carolina</option>  
+<option value="SD">South Dakota</option>
+<option value="TN">Tennessee</option>
+<option value="TX">Texas</option> 
+<option value="UT">Utah</option>         
+<option value="VA">Virginia</option> 
+<option value="VT">Vermont</option>  
+<option value="WA">Washington</option>  
+<option value="WV">West Virginia</option>
+<option value="WI">Wisconson</option>  
+<option value="WY">Wyoming</option>     
+</select><br>
+<span class="validateError" id="stateError" style="display: none; color:#090">**You must select your state**</span>
+</fieldset>
+
+<fieldset>
+<label for="zip">Zip</label>
+<input type="text"   id="zip" name="zip" onblur="validateZip(zip)" placeholder ="#####"/>
+<br />
+<span class="zipError" id="zipError" style="display:none; color:#090;">**Please enter 5-digit zip code**</span> 
+</fieldset>
+<fieldset>
+<label for="birthday">Birthday</label>
+<input type="date"  id="birthday" name="birthday"  placeholder="mm/dd/yyyy" onblur="validateDate(birthday)"><br>
+<span class="validateError" id="birthdayError" style="display:none; color:#090;">**Please enter birthday in "mm/dd/yyyy" format or use the datepicker**</span>
+</fieldset>
+<fieldset>
+<label for="age">Age</label>
+<input  type="number" id="age" name="age" placeholder="Enter age" onblur="validateAge(age)"><br>
+<span class="validateError" id="ageError" style="display:none; color:#090;">**You may be too young or too old to learn JavaScript**</span>
+</fieldset>
+<fieldset>
+<label for="phone">Telphone</label>
+<input type="text" id="phone" name="phone" onblur="validatePhone(phone)" placeholder="301-333-5555"><br />
+<span class="validateError" id="phoneError" style="display:none; color:#090;">**Please enter phone number as 301-555-5555**</span>
+</fieldset>
+<fieldset>
+<label for="mobile">Mobile Phone</label>
+<input type="text" id="mobile" name="mobile" placeholder="240-888-2222" onblur="validatePhone('mobile')"  /><br />
+<span class="validateError" id="mobileError" style="display:none; color:#090;">**Please enter phone number as 301-555-5555**</span>
+</fieldset>
+<fieldset>
+<label for="email">Email</label>
+<input type="email" name="email"  id="email"value="" class="required" onblur="validateEmail(email)" placeholder="user@example.com"><br>
+<span class="validateError" id="emailError" style="display: none;	color:#090;">**You must enter a valid email address**</span>
+</fieldset>
+<fieldset>
+<label for="url">Staging URL</label>
+<input type="url" name="url"  id="url" value="" class="required" onblur="validateURL(url)" 
+placeholder="http://www.google.com/"><br>
+<span class="validateError" id="urlError" style="display:none; color:#090;">**Please enter a valid URL address**</span>
+</fieldset>
+<br />
+<fieldset>
+<label for="about_me">About me</label>
+<textarea id="about_me" maxlength="300" class="required" value=""    onblur="validateTextarea()" placeholder="Please indicate what you expect to learn from JavaScript"></textarea><br />
+<span class="validateError" id="about_meError" style="display:none; color:#090;">**Please describe more about yourself**</span>
+</fieldset>
+<br />
+<fieldset>
+<label for="browser">Favorite Browser</label>
+		<select id="browser" name="browser" onblur="validateSelect(browser)">
+			
+            <option value="">---Please select---</option>
+			<option value="IE9+">IE9 and Up</option>
+			<option value="IE8">IE8 and Below</option>
+			<option value="chrome">Chrome</option>
+            <option value="firefox">Firefox</option>
+            <option value="opera">Opera</option>
+            <option value="safari">Safari</option>
+            
+		</select>
+	<br>
+    <span class="validateError" id="browserError" style="display: none; color:#090">**You must select your favorite browser**</span>
+</fieldset>
+<fieldset>
+<label for="year">Year at MC</label>
+<div>
+<label><input type="radio" name="year" checked="checked">First</label><br>
+<label><input type="radio" name="year">Second</label><br>
+<label><input type="radio" name="year">Third</label><br>
+<label><input type="radio" name="year">Fourth</label>
+</div><br>
+<span class="validateError" id="yearError" style="display: none; color:#090">**You must choose number of years at MC**</span>
+<br>
+<label for="skills">Skills</label>
+<div>
+<label><input type="checkbox" id="HTML" name="skills">HTML</label><br>
+<label><input type="checkbox" id="CSS" name="skills">CSS</label><br>
+<label><input type="checkbox" id="JavaScript" name="skills">JavaScript</label><br />
+<label><input type="checkbox" id="jQuery" name="skills">jQuery</label><br>
+        
+<label><input type="checkbox" id="Dojo" name="skills">Dojo</label><br>
+<label><input type="checkbox" id="Prototype" name="skills">Prototype</label><br />
+<label><input type="checkbox" id="Flash" name="skills">Flash</label><br>
+<label><input type="checkbox" id="Flex" name="skills">Flex</label><br />
+</div><br />
+<span class="validateError" id="skillsError" style="display: none; color:#090">**You must check all of your skills**</span>
+</fieldset>
+<br>
+<fieldset>
+<label for="password">Password Creation</label>
+<input type="password" id="password" name="password" value=""  class="required" onblur="validatePassword(password)"autocomplete="off"
+placeholder="8 -10 characters"><br>
+<span class="validateError" id="passwordError" style="display:none; color:#090;">**A valid passowrd must be with 8 -10 characters and numbers**</span>
+</fieldset>
+<fieldset>
+<label for="pswd_reconfirm">Password Reconfirmation</label>
+<input type="password" id="pswd_reconfirm" name="pswd_reconfirm"  value="" class="required" onblur="validatePasswordReconfirm(pswd_reconfirm)" autocomplete="off"
+placeholder="Type your password again"><br>
+<span class="validateError" id="pswd_reconfirmError" style="display:none; color:#930;">**Password Creation Failed!!!</span>				
+</fieldset>
+<br />
+<fieldset>				
+<label>&nbsp;</label>
+<input type="submit" value="Submit"><br>
+</fieldset>
+</fieldset>
+</form>
+</div>
+
+</body>
+</html>
