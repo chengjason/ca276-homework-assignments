@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Drawing using the Canvas API</title>
+<style type="text/css">
+/* CSS Document */
+body {
+	width:1080px;
+	border:5px solid #C90;
+	margin:10px auto;
+	background-color:#FF6; 
+}
+#pageheader {
+	width:100%;
+	background-color:#FFC;
+}
+p {
+	line-height:20px;
+	font-weight:bold;
+	color:#300;
+	font-size:18px;
+}
+h2{
+	color:#390;
+}
+h4 {
+	color:#030;
+}
+</style>
+</head>
+
+<body>
+<header id="pageheader" style="text-align:center;">
+<section id="headbanner" align="center">
+<canvas id="hbcanvas1" width="220px" height="100px"
+ style="border:5px double #FF33CC; border-radius:10px; border-style:inset; ">Your browser needs to update</canvas>
+
+ <canvas id="hbcanvas2" width="500px" height="100px"
+ style="border:5px double #CC00FF; border-radius:10px; border-style:inset; ">Your browser needs to update</canvas>
+
+  <canvas id="hbcanvas3" width="220px" height="100px"
+ style="border:5px double #FF33FF; border-radius:10px; border-style:inset;">Your browser needs to update</canvas>
+<script type="text/javascript" src="canvas.js"></script>
+</section><br/>
+<section id="masterpost"  style="width:100%; margin-left:5px; padding-left:15px;">
+<h2>Drawing A Line</h2>
+<p>Define a starting point(0,0), and an ending 
+point (200,100). Then use the stroke() method to  draw the diagonal line on the canvas:</p>
+
+<canvas id="lineCanvas1" width="200" height="100" style="border:1px solid #d3d3d3;background:#ffffff;">Upgrade Your browser!
+</canvas><br />
+
+
+
+<h2>Drawing Circles</h2>
+<p>Create a circle with the arc() method:</p>
+<canvas id="cirCanvas1" width="200" height="100" style="border:1px solid #d3d3d3;background:#ffffff;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<p>Create a filled circle with the arc() method:</p>
+<canvas id="cirCanvasF" width="200" height="100" style="border:1px solid #d3d3d3;background:#ffffff;">
+Your browser does not support the HTML5 canvas tag.
+</canvas><br />
+<h2>To Create Arcs in Series</h2>
+<p>To create arcs in series, such as the lunar images, using "loop" could be easier. </p>
+
+<canvas id="cirCanvasSeries" width="150" height="200"></canvas>
+
+<h2>Drawing Filled/Non-filled Text </h2>
+<p>Writing a 48px filled "Arial Bold" text on a 240 x 120 canvas:</p>
+<canvas id="textCanvas1" width="240" height="120" style="border:1px solid #d3d3d3;background:#ffffff;">Upgrade Your Browser!</canvas><br />
+<p>Writing a 48px non-filled "Arial Bold" text on a 240 x 120 canvas:</p>
+
+<canvas id="textCanvas2" width="240" height="120" style="border:1px solid #d3d3d3;background:#ffffff;">Upgrade Your Browser!</canvas><br />
+<h2>Using createLinearGradient():</h2>
+<p>Create a linear gradient to fill a rectangle with 
+gradients:</p>
+
+<canvas id="grdCanvas1" width="200" height="100" style="border:1px solid #d3d3d3;background:#ffffff;">Upgrade Your Browser! 
+</canvas><br />
+<h2>Using createRadialGradient():</h2>
+<p>Create a radial gradient to fill a rectangle with the circular effect:</p>
+
+<canvas id="grdCanvas2" width="200" height="100" style="border:1px solid #d3d3d3;background:#FFF;">Upgrade Your Browser!
+</canvas><br />
+
+<script type="text/javascript" src="hw8_CanvasDrawing.js"></script>
+</section>
+ <footer id="pagefooter"> <hr>
+<h4 align="center">This webpage is created for HW8 of CA276. All Rights Reserved. &copy;2013 Jason Cheng</h4>
+</footer>
+</body>
+</html>
