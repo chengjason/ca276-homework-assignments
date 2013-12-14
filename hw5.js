@@ -32,14 +32,14 @@ dList = document.createElement("dl");
 dTerm = document.createElement("dt");
 dDefinition = document.createElement("dd");
 
-var term1, text, definition1; 
+var term1, definition1;
 term1 = document.createTextNode("Allowance For Doubtful Accounts");
-text = "A contra-asset account associated with Accounts Receivable deemed uncollectible"; 
-definition1 = document.createTextNode(text);
+//JG: Moving the string within createTextNode to keep your code consistent
+definition1 = document.createTextNode("A contra-asset account associated with Accounts Receivable deemed uncollectible");
 
 dDefinition.appendChild(definition1);
 dTerm.appendChild(term1);
-dList.appendChild(dTerm); 
+dList.appendChild(dTerm);
 dList.appendChild(dDefinition);
 
 document.body.appendChild(dList);
@@ -50,28 +50,12 @@ document.body.appendChild(dList);
 // Do the same thing as problem 1 only insert your HTML using the innerHTML
 // property of the DIV with id="definitions".
 
-var addList = function() {
-var dList, dTerm, dDefinition;
-dList = document.createElement("dl");
-dTerm = document.createElement("dt");
-dDefinition = document.createElement("dd");
+//JG: There was no need for the function here.
 
-var term1 =  "Allowance for Doubtful Accounts";
-var text1 =  "A contra asset-account associated with Accounts Receivable deemed uncollectible";
+//JG: This one did not require use of createElement or createTextNode.
 
-dDefinition.innerHTML = text1;
-dTerm.innerHTML = term1;
-dList.appendChild(dDefinition);
-dList.insertBefore(dTerm, dDefinition);
+document.getElementById('definitions').innerHTML = "<dl><dt>Allowance For Doubtful Accounts</dt><dd>A contra-asset account associated with Accounts Receivable deemed uncollectible</dd></dl>";
 
-return document.body.appendChild(dList);
-}
-
-var div = document.createElement("div");
-div.setAttribute("id", "definitions");
-
-var p = addList();
-div.innerHTML = p;
 
 // Problem 3
 
@@ -79,15 +63,7 @@ div.innerHTML = p;
 // this problem you won't need to worry about setting up a click handler.
 // Just worry about the code that does the text appending.
 
-var dTerm = $("<dt></dt>").html("Allowance for Doubtful Accounts");
-var dDefinition = $("<dd></dd>").html("A contra asset-account associated with Accounts Receivable deemed uncollectible");
-var dList = $("<dl></dl>").append(dTerm, dDefinition);
-$("<body></body>").append(dList);
+//JG: This one was a lot simpler than what it appeared to be.
 
-//Second attempt for Problem 3
-
-var dl = $("<dl></dl>");
-var dt = $("<dt></dt>").html("Allowance for Doubtful Accounts");
-var dd = $("<dd></dd>").html("A contra asset-account associated with Accounts Receivable deemed uncollectible");
-dl.append(dt, dd);
-$("<body></body>").append(dl);
+$('#definitions')
+	.append('<dl><dt>Allowance For Doubtful Accounts</dt><dd>A contra-asset account associated with Accounts Receivable deemed uncollectible</dd></dl>');
